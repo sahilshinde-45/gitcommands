@@ -1,0 +1,39 @@
+
+git --version
+git config --global user.name ""
+git config --global user.email ""
+
+git init
+git status
+git checkout -b dev
+git checkout -b test
+notepad first.txt
+notepad second.txt
+notepad third.txt
+git checkout dev
+git add second.txt
+git add third.txt
+git commit -m "<message>"
+
+git checkout test
+git add first.txt
+git commit -m "<message>"
+
+git checkout dev
+notepad third.txt   (_modified_)
+git diff
+git add third.txt
+git commit -m "<message>"
+
+git checkout master
+git merge test
+git merge dev
+
+git remote add origin https://github.com/sahil876/assgit.git
+git push -u origin master
+
+cd
+mkdir cloneassgit
+cd cloneassgit
+git clone https://github.com/sahil876/assgit.git
+
